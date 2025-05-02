@@ -5,20 +5,17 @@ menuIcon.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// Initialize EmailJS with your User ID
-emailjs.init("M1Rs109ZxToDj9ZkK"); // Replace "your-user-id" with your actual EmailJS User ID
+emailjs.init("M1Rs109ZxToDj9ZkK");
 
-// Add an event listener to the contact form
 document.querySelector(".contact-form").addEventListener("submit", function (e) {
-  e.preventDefault(); // Prevent the default form submission
+  e.preventDefault();
 
-  // Send the form data using EmailJS
   emailjs
-    .sendForm("service_pfl3weh", "template_hs8ygs7", this) // Replace "template_yourTemplateID" with your actual template ID
+    .sendForm("service_pfl3weh", "template_hs8ygs7", this)
     .then(
       function () {
         alert("Message sent successfully!");
-        document.querySelector(".contact-form").reset(); // Clear the form after submission
+        document.querySelector(".contact-form").reset();
       },
       function (error) {
         alert("Failed to send message. Please try again.");
