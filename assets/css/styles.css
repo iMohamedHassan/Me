@@ -70,7 +70,6 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 10;
 }
 
 .logo {
@@ -598,7 +597,7 @@ footer p {
   }
 
   .home-content h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .home-content p {
@@ -607,6 +606,10 @@ footer p {
 
   .home-img img {
     display: none;
+  }
+
+  #about p {
+    font-size: 1.4rem;
   }
 
   .certificates {
