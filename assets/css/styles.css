@@ -156,15 +156,13 @@ section {
   font-weight: 500;
   color: var(--highlight-color);
   margin-bottom: 1.5rem;
-  text-shadow: 0 0 20px var(--highlight-color);
+  text-shadow: 0 0 15px var(--highlight-color);
 }
 
 .home-content h2.role {
   font-size: 2.5rem;
-  font-weight: 400;
   color: var(--main-color);
-  margin-bottom: 1.5rem;
-  text-shadow: 0 0 10px var(--main-color);
+  margin-bottom: 1rem;
 }
 
 .home-content p {
@@ -249,6 +247,10 @@ section {
 .section ul li {
   font-size: 1.6rem;
   margin-bottom: 1rem;
+}
+
+#about p {
+  line-height: 1.6;
 }
 
 .certificates {
