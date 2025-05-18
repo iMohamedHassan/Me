@@ -3,191 +3,219 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mohamed Hassan</title>
+    <title>Mohamed Hasan</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Tagesschrift&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="./assets/images/favicon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
     <header class="header">
-      <a href="index.html" class="logo tagesschrift-regular">
-        <i class="fas fa-code"></i> Mohamed Hassan
-      </a>
-      <nav class="navbar">
-        <div id="menu-icon" class="menu-icon">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="logo">Mohamed Hassan</div>
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <nav class="nav" id="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <section id="home" class="home">
-      <div class="home-content">
-        <h3>Hello, I'm</h3>
-        <h1>Mohamed Hassan</h1>
-        <h2 class="role">Front-End Web Developer</h2>
-        <p class="text-animation"><span></span></p>
-        <div class="btn-group">
-          <a
-            href="assets/images/Mohamed_Hassan_Cv.pdf"
-            class="btn download-cv"
-            download
-          >
-            Download CV <i class="fas fa-download"></i>
-          </a>
-        </div>
-      </div>
-      <div class="home-img">
-        <img src="assets/images/profile.png" alt="Profile Picture" />
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Hello, I'm Mohamed</h1>
+        <p>
+          Front-End Web Developer passionate about building modern, responsive
+          websites.
+        </p>
+        <a href="assets/images/Mohamed_Hassan_Cv.pdf" class="btn" download
+          >Download CV</a
+        >
       </div>
     </section>
 
-    <section id="about" class="section fade-in">
+    <section id="about" class="section">
       <h2>About Me</h2>
       <p>
-        Hi, I’m Mohamed — a front-end developer with a passion for
-        building responsive, accessible, and user-focused web applications. I
-        specialize in modern JavaScript frameworks like React and Next.js, and I
-        enjoy crafting clean, intuitive interfaces that provide real value to
-        users. I have a strong eye for design and performance, and I focus on
-        creating seamless digital experiences that work beautifully across
-        devices and screen sizes. I'm always learning and staying current with
-        web trends — whether it's refining my understanding of JavaScript or
-        exploring new UX patterns, I thrive on turning ideas into interactive,
-        polished products. I'm currently open to freelance, part-time, or
-        full-time opportunities — let’s connect!
+        Hi, I’m Mohamed — a front-end developer with a passion for building
+        responsive, accessible, and user-focused web applications. I specialize
+        in modern JavaScript frameworks like React and Next.js, and I enjoy
+        crafting clean, intuitive interfaces that provide real value to users. I
+        have a strong eye for design and performance, and I focus on creating
+        seamless digital experiences that work beautifully across devices and
+        screen sizes. I'm always learning and staying current with web trends —
+        whether it's refining my understanding of JavaScript or exploring new UX
+        patterns, I thrive on turning ideas into interactive, polished products.
+        I'm currently open to freelance, part-time, or full-time opportunities —
+        let’s connect!
       </p>
     </section>
 
-    <section id="certifications" class="section">
-      <h2>Certifications</h2>
-      <div class="certificates">
-        <div class="certificate-item">
-          <img
-            src="assets/images/certificate1.jpg"
-            alt="Digital Egypt Cubs Initiative – Level One"
-          />
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Git</span>
+        <span>Responsive Design</span>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>Portfolio Website</h3>
+          <img src="./assets/images/project1.png" alt="Project 1" />
+          <p>
+            Technologies: HTML, CSS, JavaScript. A personal portfolio website to
+            showcase my projects, certifications, and contact information.
+            Designed with responsive layout and clean navigation to highlight my
+            development work.
+          </p>
+          <a href="https://imohamed.netlify.app/" class="card-link"
+            >View Project</a
+          >
+        </div>
+        <div class="card">
+          <h3>Rock, Paper, Scissors Game</h3>
+          <img src="./assets/images/Project2.png" alt="Project 2" />
+          <p>
+            Technologies: JavaScript, HTML, CSS. A browser-based game where the
+            user plays against the computer. Includes a scoring system and
+            dynamic result display.
+          </p>
+          <a href="https://iplayrock.netlify.app/" class="card-link">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Gymers | Fitness & Meal Planner</h3>
+          <img src="./assets/images/Project3.png" alt="Project 3" />
+          <p>
+            Technologies: Python, SQLite, HTML, CSS, JavaScript. A multi-feature
+            app that generates daily workout plans, recommends healthy meals
+            based on user preferences (budget, allergies, meal count), and
+            offers a daily task list for productivity.
+          </p>
+          <a href="https://github.com/iMohamedHassan/Gymers" class="card-link">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Python Text-Based Adventure Game</h3>
+          <img src="./assets/images/Project4.png" alt="Project 4" />
+          <p>
+            Technologies: Python. A command-line interactive story game where
+            users make choices that affect the outcome. Designed for
+            entertainment and beginner-friendly coding practice.
+          </p>
+          <a href="https://github.com/iMohamedHassan/Adventure" class="card-link">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Blog Platform</h3>
+          <img src="./assets/images/Project5.png" alt="Project 5" />
+          <p>
+            Technologies: HTML, CSS, JavaScript. A personal blogging platform
+            where users can browse and read blog posts. Focuses on layout,
+            readability, and responsive design.
+          </p>
+          <a href="https://i9blogger.netlify.app/" class="card-link">View Project</a>
+        </div>
+        <div class="card">
+          <h3>Calculator App</h3>
+          <img src="./assets/images/project2.png" alt="Project 6" />
+          <p>
+            Technologies: HTML, CSS, JavaScript. A functional web-based
+            calculator capable of performing basic arithmetic operations.
+            Designed with a clean user interface and responsive layout.
+          </p>
+          <a href="https://i9calculate.netlify.app/" class="card-link"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="certificates" class="section">
+      <h2>Certificates</h2>
+      <div class="card-grid">
+        <div class="card">
+          <img src="assets/images/certificate1.jpg" alt="Certificate 1" />
           <p>
             Digital Egypt Cubs Initiative – Level One (Completed: October 2023)
           </p>
         </div>
-        <div class="certificate-item">
-          <img
-            src="assets/images/certificate2.jpg"
-            alt="Digital Egypt Cubs Initiative – Level Two"
-          />
+        <div class="card">
+          <img src="assets/images/certificate2.jpg" alt="Certificate 2" />
           <p>
             Digital Egypt Cubs Initiative – Level Two (Completed: October 2024)
           </p>
         </div>
-        <div class="certificate-item">
-          <img
-            src="assets/images/certificate3.jpg"
-            alt="Front End Development – CSS"
-          />
+        <div class="card">
+          <img src="assets/images/certificate3.jpg" alt="Certificate 2" />
           <p>Front End Development – CSS (Completed: April 2024)</p>
         </div>
-        <div class="certificate-item">
-          <img
-            src="assets/images/certificate4.jpg"
-            alt="Introduction to Microsoft Excel"
-          />
+        <div class="card">
+          <img src="assets/images/certificate4.jpg" alt="Certificate 2" />
           <p>Introduction to Microsoft Excel (Completed: July 2024)</p>
         </div>
-        <div class="certificate-item">
-          <img
-            src="assets/images/certificate5.jpg"
-            alt="Basics of Artificial Intelligence & ChatGPT Technology"
-          />
+        <div class="card">
+          <img src="assets/images/certificate5.jpg" alt="Certificate 2" />
           <p>
             Basics of Artificial Intelligence & ChatGPT Technology (Completed:
             July 2024)
           </p>
         </div>
-        <div class="certificate-item">
-          <img src="assets/images/certificate6.jpg" alt="Google Ads Course" />
+        <div class="card">
+          <img src="assets/images/certificate6.jpg" alt="Certificate 2" />
           <p>Google Ads Course (Completed: July 2024)</p>
         </div>
       </div>
     </section>
 
     <section id="contact" class="section">
-      <h2>Contact Me</h2>
-      <form action="" method="POST" class="contact-form">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Your Name"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Your Email"
-            required
-          />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Your Message"
-            required
-          ></textarea>
-        </div>
-        <button type="submit" class="btn">Send Message</button>
+      <h2>Contact</h2>
+      <form class="contact-form" id="contact-form">
+        <input type="text" name="user_name" placeholder="Your Name" required />
+        <input
+          type="email"
+          name="user_email"
+          placeholder="Your Email"
+          required
+        />
+        <textarea
+          name="message"
+          placeholder="Your Message"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit" class="btn">Send</button>
       </form>
     </section>
 
-    <footer>
-      <p>&copy; 2025 Mohamed Hassan Mohamed Hafez. All rights reserved.</p>
-      <div class="social-icons">
+    <footer class="footer">
+      <p>&copy; 2025 Mohamed Hasan. All rights reserved.</p>
+      <div class="socials">
         <a href="https://web.facebook.com/mohammed00xd"
           ><i class="fab fa-facebook"></i
-        ></a>
-        <a href="https://x.com/iMohamedHasan"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.linkedin.com/in/mohamed-hassan-310608274/"
-          ><i class="fab fa-linkedin"></i
         ></a>
         <a href="https://wa.me/+201110629635"
           ><i class="fab fa-whatsapp"></i
         ></a>
+        <a href="https://www.linkedin.com/in/iMohamedHassan/"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <a href="https://x.com/iMohamedHasan"><i class="fab fa-twitter"></i></a>
         <a href="https://www.instagram.com/3mk_muhamed/"
           ><i class="fab fa-instagram"></i
         ></a>
       </div>
     </footer>
-    <a href="#home" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

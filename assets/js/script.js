@@ -1,9 +1,51 @@
-const menuIcon = document.getElementById("menu-icon");
-const navLinks = document.querySelector(".nav-links");
-
-menuIcon.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  });
 });
+
+// Optional: Fade-in effect on scroll
+const faders = document.querySelectorAll(".section");
+
+const appearOnScroll = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    });
+  },
+  {
+    threshold: 0.1,
+  }
+);
+
+faders.forEach(section => {
+  section.classList.add("fade-in");
+  appearOnScroll.observe(section);
+});
+
+// Mobile nav toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", () => {
+  navMenu.classList.toggle("show");
+  menuToggle.classList.toggle("open");
+});
+
+// Optional: Dark mode / theme toggle (stub for future use)
+/*
+const toggle = document.getElementById("theme-toggle");
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+});
+*/
 
 emailjs.init("M1Rs109ZxToDj9ZkK");
 
@@ -23,77 +65,3 @@ document
       }
     );
   });
-
-// Scroll-based animations
-const fadeInElements = document.querySelectorAll(".fade-in");
-
-const observer = new IntersectionObserver(
-  (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.1 }
-);
-
-fadeInElements.forEach((el) => {
-  observer.observe(el);
-});
-
-// Typing effect
-const typingText = document.querySelector(".text-animation span");
-const words = [
-  "Front-End Web Developer",
-  "Creative Designer",
-  "Problem Solver",
-];
-let wordIndex = 0;
-let charIndex = 0;
-
-function type() {
-  if (charIndex < words[wordIndex].length) {
-    typingText.textContent += words[wordIndex][charIndex];
-    charIndex++;
-    setTimeout(type, 100);
-  } else {
-    setTimeout(erase, 2000);
-  }
-}
-
-function erase() {
-  if (charIndex > 0) {
-    typingText.textContent = words[wordIndex].substring(0, charIndex - 1);
-    charIndex--;
-    setTimeout(erase, 50);
-  } else {
-    wordIndex = (wordIndex + 1) % words.length;
-    setTimeout(type, 1000);
-  }
-}
-
-document.addEventListener("DOMContentLoaded", () => {
-  type();
-});
-
-// Back-to-top button
-const backToTop = document.querySelector(".back-to-top");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTop.classList.add("show");
-  } else {
-    backToTop.classList.remove("show");
-  }
-});
-
-// Smooth scroll to the top
-backToTop.addEventListener("click", (e) => {
-  e.preventDefault();
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-});
