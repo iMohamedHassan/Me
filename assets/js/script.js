@@ -54,7 +54,7 @@ document
   .addEventListener("submit", function (e) {
     e.preventDefault();
 
-    emailjs.sendForm("service_pfl3weh", "template_hs8ygs7", this).then(
+    emailjs.sendForm("service_5gvai3c", "template_hs8ygs7", this).then(
       function () {
         alert("Message sent successfully!");
         document.querySelector(".contact-form").reset();
