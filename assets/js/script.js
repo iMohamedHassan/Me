@@ -1,5 +1,5 @@
 // Smooth scrolling for anchor links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
     const target = document.querySelector(this.getAttribute("href"));
@@ -14,7 +14,7 @@ const faders = document.querySelectorAll(".section");
 
 const appearOnScroll = new IntersectionObserver(
   (entries, observer) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       entry.target.classList.add("visible");
       observer.unobserve(entry.target);
@@ -25,7 +25,7 @@ const appearOnScroll = new IntersectionObserver(
   }
 );
 
-faders.forEach(section => {
+faders.forEach((section) => {
   section.classList.add("fade-in");
   appearOnScroll.observe(section);
 });
@@ -47,6 +47,13 @@ toggle.addEventListener("click", () => {
 });
 */
 
+document
+  .querySelector('a[href="#home"]')
+  .addEventListener("click", function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
 emailjs.init("M1Rs109ZxToDj9ZkK");
 
 document
@@ -65,3 +72,17 @@ document
       }
     );
   });
+
+// Optional: Add a scroll-to-top button
+const scrollToTopBtn = document.getElementById("scroll-to-top");
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
+// Show the button when scrolling down
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop > 300) {
+    scrollToTopBtn.style.display = "block";
+  } else {
+    scrollToTopBtn.style.display = "none";
+  }
+});
