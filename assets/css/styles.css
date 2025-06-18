@@ -101,7 +101,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 5rem 10%;
+  padding: 3rem 10% 4rem;
   gap: 4rem;
   min-height: 88vh;
   background: linear-gradient(120deg, #e0eaff 0%, #f8faff 100%);
@@ -242,7 +242,7 @@ body {
   justify-content: center;
   z-index: 1;
 }
-.mobile-hero-visual img{
+.mobile-hero-visual img {
   width: 60%;
   max-width: 600px;
   border-radius: 18px;
